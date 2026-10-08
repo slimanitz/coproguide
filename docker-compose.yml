@@ -1,0 +1,46 @@
+name: coproguide
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: coproguide
+      POSTGRES_PASSWORD: coproguide
+      POSTGRES_DB: coproguide
+    ports:
+      - "5438:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U coproguide -d coproguide"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  web:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    # Every variable documented in .env.example works in Docker: .env.example provides the
+    # defaults (mock provider, no key) and an optional .env overrides them.
+    env_file:
+      - path: .env.example
+        required: true
+      - path: .env
+        required: false
+    environment:
+      # Container-specific values that must win over both files.
+      DATABASE_URL: postgres://coproguide:coproguide@db:5432/coproguide
+      MODEL_CACHE_DIR: /app/.cache/models
+    ports:
+      - "3400:3400"
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://localhost:3400/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
+volumes:
+  db-data:

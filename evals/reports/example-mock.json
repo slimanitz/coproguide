@@ -1,0 +1,1654 @@
+{
+  "runId": "d3b129e5-f7ee-4a53-816e-5edb17fd8814",
+  "name": "example-mock",
+  "provider": "mock",
+  "model": "mock-claude-sonnet-5-5",
+  "judgeModel": "mock-judge",
+  "minSimilarity": 0.83,
+  "startedAt": "2026-10-08T17:58:43.070Z",
+  "finishedAt": "2026-10-08T17:58:50.532Z",
+  "metrics": {
+    "questions": 50,
+    "recallAt5": 0.9333333333333333,
+    "recallAt8": 0.9333333333333333,
+    "citationPrecision": 0.37500000000000006,
+    "citationGroundedness": 1,
+    "refusalAccuracy": 0.8,
+    "falseRefusalRate": 0.022222222222222223,
+    "judgeScore": 3.86,
+    "meanLatencyMs": 93.28,
+    "p95LatencyMs": 85,
+    "totalCostEur": 0.33253147000000005
+  },
+  "results": [
+    {
+      "id": "q01",
+      "question": "Quelle majorité pour voter des travaux d'amélioration ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:25",
+        "65-557:25-1"
+      ],
+      "retrievedArticles": [
+        "65-557:25-1",
+        "65-557:24",
+        "65-557:14-2-1",
+        "65-557:25",
+        "65-557:14-2",
+        "65-557:26",
+        "65-557:22"
+      ],
+      "citedArticles": [
+        "65-557:25",
+        "65-557:24",
+        "65-557:14-2"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 25 — Majorité absolue des voix de tous les copropriétaires** (loi du 10 juillet 1965) : « n) L'ensemble des travaux comportant transformation, addition ou amélioration. » [4]\n- **Article 24 — Majorité simple des voix exprimées** (loi du 10 juillet 1965) : « I. – Les décisions de l'assemblée générale sont prises à la majorité des voix exprimées des copropriétaires présents, représentés ou ayant voté par correspondance, s'il n'en est autrement ordonné par la loi. » [2]\n- **Article 14-2 — Plan pluriannuel de travaux** (loi du 10 juillet 1965) : « II. – Le syndic inscrit à l'ordre du jour de la première assemblée générale des copropriétaires qui suit l'élaboration ou la révision du projet de plan pluriannuel de travaux la présentation de ce projet ainsi que la question de l'adoption de tout ou partie de ce projet de plan, qui est soumise à la majorité des voix (…) » [5]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8474518727439456,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 61 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 2648,
+      "costEur": 0.00867095
+    },
+    {
+      "id": "q02",
+      "question": "Quelle majorité faut-il pour élire ou révoquer le syndic ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:25"
+      ],
+      "retrievedArticles": [
+        "65-557:17",
+        "65-557:18",
+        "65-557:25-1",
+        "65-557:21",
+        "65-557:26",
+        "65-557:24"
+      ],
+      "citedArticles": [
+        "65-557:25-1",
+        "65-557:21",
+        "65-557:18"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 25-1 — Passerelle de majorité : second vote à la majorité de l'article 24** (loi du 10 juillet 1965) : « Lorsque l'assemblée générale des copropriétaires n'a pas décidé à la majorité prévue à l'article 25 mais que le projet a recueilli au moins le tiers des voix de tous les copropriétaires composant le syndicat, la même assemblée se prononce à la majorité prévue à l'article 24 en procédant immédiatement à un second vote. » [3]\n- **Article 21 — Le conseil syndical** (loi du 10 juillet 1965) : « L'assemblée générale des copropriétaires, statuant à la majorité de l'article 25, arrête un montant des marchés et des contrats à partir duquel la consultation du conseil syndical est rendue obligatoire. A la même majorité, elle arrête un montant des marchés et des contrats autres que celui de syndic à partir duquel (…) » [4]\n- **Article 18 — Missions du syndic** (loi du 10 juillet 1965) : « I. – Indépendamment des pouvoirs qui lui sont conférés par d'autres dispositions de la présente loi ou par une délibération spéciale de l'assemblée générale, le syndic est chargé, dans les conditions (…) … - de proposer, lorsque le syndic est un syndic professionnel, un accès en ligne sécurisé aux documents dématérialisés relatifs à la gestion de l'immeuble ou des lots gérés, sauf décision contraire de l'assemblée générale prise à la majorité de l'article 25 ; » [5]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8737344330907855,
+      "recallAt5": 0,
+      "recallAt8": 0,
+      "citationPrecision": 0,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 60 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 44,
+      "costEur": 0.00822246
+    },
+    {
+      "id": "q03",
+      "question": "Qu'est-ce que la passerelle de l'article 25-1 ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:25-1"
+      ],
+      "retrievedArticles": [
+        "65-557:25-1",
+        "89-462:25-3",
+        "65-557:25",
+        "65-557:14-2-1",
+        "65-557:21",
+        "89-462:25-9",
+        "89-462:25-6"
+      ],
+      "citedArticles": [
+        "65-557:25-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 25-1 — Passerelle de majorité : second vote à la majorité de l'article 24** (loi du 10 juillet 1965) : « Lorsque l'assemblée générale des copropriétaires n'a pas décidé à la majorité prévue à l'article 25 mais que le projet a recueilli au moins le tiers des voix de tous les copropriétaires composant le syndicat, la même assemblée se prononce à la majorité prévue à l'article 24 en procédant immédiatement à un second vote. » [1]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8502892851829589,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 1,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 69 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 56,
+      "costEur": 0.0055375400000000005
+    },
+    {
+      "id": "q04",
+      "question": "Quelle majorité pour modifier le règlement de copropriété concernant l'usage des parties communes ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:26"
+      ],
+      "retrievedArticles": [
+        "65-557:26",
+        "65-557:8",
+        "65-557:25",
+        "65-557:10",
+        "65-557:3",
+        "65-557:4",
+        "65-557:1"
+      ],
+      "citedArticles": [
+        "65-557:26",
+        "65-557:25",
+        "65-557:8"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 26 — Double majorité des deux tiers** (loi du 10 juillet 1965) : « Sont prises à la majorité des membres du syndicat représentant au moins les deux tiers des voix les décisions concernant : … b) La modification, ou éventuellement l'établissement, du règlement de copropriété dans la mesure où il concerne la jouissance, l'usage et l'administration des parties communes ; » [1]\n- **Article 25 — Majorité absolue des voix de tous les copropriétaires** (loi du 10 juillet 1965) : « Ne sont adoptées qu'à la majorité des voix de tous les copropriétaires les décisions concernant : » [3]\n- **Article 8 — Règlement de copropriété** (loi du 10 juillet 1965) : « I. – Un règlement conventionnel de copropriété, incluant ou non l'état descriptif de division, détermine la destination des parties tant privatives que communes, ainsi que les conditions de leur jouissance ; il fixe également, sous réserve des dispositions de la présente loi, les règles relatives à l'administration (…) » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8960454278073495,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 95 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 46,
+      "costEur": 0.00748114
+    },
+    {
+      "id": "q05",
+      "question": "Peut-on supprimer le poste de gardien de l'immeuble et à quelle majorité ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:26"
+      ],
+      "retrievedArticles": [
+        "65-557:26",
+        "65-557:24",
+        "65-557:25-1",
+        "65-557:25",
+        "65-557:1"
+      ],
+      "citedArticles": [
+        "65-557:26"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 26 — Double majorité des deux tiers** (loi du 10 juillet 1965) : « Sont prises à la majorité des membres du syndicat représentant au moins les deux tiers des voix les décisions concernant : … c) La suppression du poste de concierge ou de gardien et l'aliénation du logement affecté au concierge ou au gardien lorsqu'il appartient au syndicat. Les deux questions sont inscrites à l'ordre du jour de la même assemblée générale ; » [1]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8695207238197389,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 1,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 82 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 85,
+      "costEur": 0.00610514
+    },
+    {
+      "id": "q06",
+      "question": "Les travaux de rénovation énergétique sont-ils votés à la majorité simple ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:24"
+      ],
+      "retrievedArticles": [
+        "65-557:14-2",
+        "65-557:25-1",
+        "65-557:24",
+        "65-557:14-2-1",
+        "65-557:25",
+        "65-557:26",
+        "65-557:22"
+      ],
+      "citedArticles": [
+        "65-557:14-2",
+        "65-557:24",
+        "65-557:25"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 14-2 — Plan pluriannuel de travaux** (loi du 10 juillet 1965) : « Ce projet de plan pluriannuel de travaux, élaboré à partir d'une analyse du bâti et des équipements de l'immeuble ainsi que du diagnostic de performance énergétique mentionné à l'article L. 126-31 du code de la construction et de l'habitation, comprend : » [1]\n- **Article 24 — Majorité simple des voix exprimées** (loi du 10 juillet 1965) : « I. – Les décisions de l'assemblée générale sont prises à la majorité des voix exprimées des copropriétaires présents, représentés ou ayant voté par correspondance, s'il n'en est autrement ordonné par la loi. » [3]\n- **Article 25 — Majorité absolue des voix de tous les copropriétaires** (loi du 10 juillet 1965) : « m) La demande d'individualisation des contrats de fourniture d'eau et la réalisation des études et travaux nécessaires à cette individualisation ; » [6]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8591316602544036,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 42 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 91,
+      "costEur": 0.0072850599999999995
+    },
+    {
+      "id": "q07",
+      "question": "Quelle majorité pour les travaux d'accessibilité aux personnes handicapées ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:24"
+      ],
+      "retrievedArticles": [
+        "65-557:24",
+        "65-557:14-2-1",
+        "65-557:14-2",
+        "65-557:25",
+        "65-557:26",
+        "65-557:25-1",
+        "65-557:9"
+      ],
+      "citedArticles": [
+        "65-557:24",
+        "65-557:14-2"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 24 — Majorité simple des voix exprimées** (loi du 10 juillet 1965) : « II. – Sont notamment approuvés dans les conditions de majorité prévues au I : … c) Les travaux d'accessibilité aux personnes handicapées ou à mobilité réduite, sous réserve qu'ils n'affectent pas la structure de l'immeuble ou ses éléments d'équipement essentiels ; » [1]\n- **Article 14-2 — Plan pluriannuel de travaux** (loi du 10 juillet 1965) : « Le projet de plan pluriannuel de travaux est établi par une personne disposant des compétences et des garanties fixées par décret. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8761543444257168,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.5,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 92 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 41,
+      "costEur": 0.0068757
+    },
+    {
+      "id": "q08",
+      "question": "Un copropriétaire peut-il faire des travaux qui touchent les parties communes ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:25"
+      ],
+      "retrievedArticles": [
+        "65-557:9",
+        "65-557:4",
+        "65-557:3",
+        "65-557:6",
+        "65-557:25",
+        "65-557:10",
+        "65-557:14-2-1"
+      ],
+      "citedArticles": [
+        "65-557:9",
+        "65-557:25",
+        "65-557:10"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 9 — Droits des copropriétaires sur leurs parties privatives et accès pour travaux** (loi du 10 juillet 1965) : « I. – Chaque copropriétaire dispose des parties privatives comprises dans son lot ; il use et jouit librement des parties privatives et des parties communes sous la condition de ne porter atteinte ni aux droits des autres copropriétaires ni à la destination de l'immeuble. » [1]\n- **Article 25 — Majorité absolue des voix de tous les copropriétaires** (loi du 10 juillet 1965) : « Ne sont adoptées qu'à la majorité des voix de tous les copropriétaires les décisions concernant : … b) L'autorisation donnée à certains copropriétaires d'effectuer à leurs frais des travaux affectant les parties communes ou l'aspect extérieur de l'immeuble, et conformes à la destination de celui-ci ; » [5]\n- **Article 10 — Répartition des charges de copropriété** (loi du 10 juillet 1965) : « Ils sont tenus de participer aux charges relatives à la conservation, à l'entretien et à l'administration des parties communes et de verser au fonds de travaux mentionné à l'article 14-2-1 la cotisation prévue au même article, proportionnellement aux valeurs relatives des parties privatives comprises dans leurs lots, (…) » [6]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8756165949285847,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 83 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 70,
+      "costEur": 0.007959299999999999
+    },
+    {
+      "id": "q09",
+      "question": "Qu'est-ce qu'une partie commune ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:3"
+      ],
+      "retrievedArticles": [
+        "65-557:3",
+        "65-557:4",
+        "65-557:6",
+        "65-557:25",
+        "65-557:10",
+        "65-557:1",
+        "65-557:2"
+      ],
+      "citedArticles": [
+        "65-557:3",
+        "65-557:4",
+        "65-557:6"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 3 — Parties communes et droits accessoires** (loi du 10 juillet 1965) : « Sont communes les parties des bâtiments et des terrains affectées à l'usage ou à l'utilité de tous les copropriétaires ou de plusieurs d'entre eux. » [1]\n- **Article 4 — Propriété indivise des parties communes, parties communes spéciales** (loi du 10 juillet 1965) : « Les parties communes sont l'objet d'une propriété indivise entre l'ensemble des copropriétaires ou certains d'entre eux seulement selon le cas. Elles ne peuvent faire l'objet d'une action ayant pour objet le partage ni d'une licitation forcée. » [2]\n- **Article 6 — Indissociabilité des parties communes** (loi du 10 juillet 1965) : « Les parties communes et les droits qui leur sont accessoires ne peuvent faire l'objet, séparément des parties privatives, d'une action en partage ni d'une licitation forcée. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8433128846679091,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 58 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 62,
+      "costEur": 0.00648182
+    },
+    {
+      "id": "q10",
+      "question": "Le mur entre deux appartements est-il une partie commune ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:7"
+      ],
+      "retrievedArticles": [
+        "65-557:3",
+        "65-557:4",
+        "65-557:6",
+        "65-557:26",
+        "65-557:7",
+        "65-557:1",
+        "65-557:25"
+      ],
+      "citedArticles": [
+        "65-557:26",
+        "65-557:1",
+        "65-557:3"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 26 — Double majorité des deux tiers** (loi du 10 juillet 1965) : « Sont prises à la majorité des membres du syndicat représentant au moins les deux tiers des voix les décisions concernant : … b) La modification, ou éventuellement l'établissement, du règlement de copropriété dans la mesure où il concerne la jouissance, l'usage et l'administration des parties communes ; » [4]\n- **Article 1 — Champ d'application du statut de la copropriété** (loi du 10 juillet 1965) : « I. – La présente loi régit tout immeuble bâti ou groupe d'immeubles bâtis à usage total ou partiel d'habitation dont la propriété est répartie par lots entre plusieurs personnes. » [6]\n- **Article 3 — Parties communes et droits accessoires** (loi du 10 juillet 1965) : « Sont communes les parties des bâtiments et des terrains affectées à l'usage ou à l'utilité de tous les copropriétaires ou de plusieurs d'entre eux. » [1]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8526786644278062,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0,
+      "citationGroundedness": 1,
+      "judgeScore": 2,
+      "judgeRationale": "Évaluation simulée : 13 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 25,
+      "costEur": 0.00639754
+    },
+    {
+      "id": "q11",
+      "question": "Comment sont réparties les charges de copropriété ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:10"
+      ],
+      "retrievedArticles": [
+        "65-557:10",
+        "65-557:18-1",
+        "65-557:1",
+        "65-557:9",
+        "65-557:26",
+        "65-557:19-2",
+        "65-557:42",
+        "65-557:8"
+      ],
+      "citedArticles": [
+        "65-557:10",
+        "65-557:9",
+        "65-557:42"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 10 — Répartition des charges de copropriété** (loi du 10 juillet 1965) : « Le règlement de copropriété fixe la quote-part afférente à chaque lot dans chacune des catégories de charges et indique les éléments pris en considération et la méthode de calcul ayant permis de fixer les quotes-parts de parties communes et la répartition des charges. » [1]\n- **Article 9 — Droits des copropriétaires sur leurs parties privatives et accès pour travaux** (loi du 10 juillet 1965) : « II. – Les copropriétaires qui subissent un préjudice par suite de l'exécution des travaux, en raison soit d'une diminution définitive de la valeur de leur lot, soit d'un trouble de jouissance grave, même s'il est temporaire, soit de dégradations, ont droit à une indemnité. Cette indemnité est à la charge du syndicat (…) » [4]\n- **Article 42 — Prescription et contestation des décisions d'assemblée générale** (loi du 10 juillet 1965) : « S'il est fait droit à une action contestant une décision d'assemblée générale portant modification de la répartition des charges, le tribunal judiciaire procède à la nouvelle répartition. » [7]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8772233693304852,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 33 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 41,
+      "costEur": 0.00761186
+    },
+    {
+      "id": "q12",
+      "question": "Le règlement de copropriété peut-il interdire la location en meublé touristique ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:8",
+        "65-557:9"
+      ],
+      "retrievedArticles": [
+        "65-557:26",
+        "65-557:8",
+        "89-462:25-3",
+        "89-462:25-8",
+        "65-557:10",
+        "89-462:25-6",
+        "89-462:25-9",
+        "65-557:1"
+      ],
+      "citedArticles": [],
+      "answer": "Je ne trouve pas de réponse fiable à cette question dans les textes dont je dispose (loi du 10 juillet 1965, décret du 17 mars 1967, loi du 6 juillet 1989). Je préfère ne pas improviser : consultez le texte officiel sur [Légifrance](https://www.legifrance.gouv.fr) ou un conseiller juriste de l'[ANIL / ADIL](https://www.anil.org) près de chez vous.",
+      "refused": true,
+      "bestSimilarity": 0.8666120608582569,
+      "recallAt5": 0.5,
+      "recallAt8": 0.5,
+      "citationPrecision": null,
+      "citationGroundedness": null,
+      "judgeScore": 1,
+      "judgeRationale": "Refus injustifié : la question est couverte par le corpus.",
+      "latencyMs": 61,
+      "costEur": 0.00379346
+    },
+    {
+      "id": "q13",
+      "question": "Puis-je refuser l'accès à mon appartement pour des travaux votés en assemblée générale ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:9"
+      ],
+      "retrievedArticles": [
+        "65-557:22",
+        "65-557:42",
+        "65-557:14-2-1",
+        "65-557:24",
+        "65-557:25-1",
+        "67-223:10",
+        "67-223:9"
+      ],
+      "citedArticles": [
+        "65-557:42",
+        "65-557:14-2-1",
+        "65-557:24"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 42 — Prescription et contestation des décisions d'assemblée générale** (loi du 10 juillet 1965) : « Sauf en cas d'urgence, l'exécution par le syndic des travaux décidés par l'assemblée générale en application des articles 25 et 26 est suspendue jusqu'à l'expiration du délai mentionné au deuxième alinéa. » [2]\n- **Article 14-2-1 — Fonds de travaux** (loi du 10 juillet 1965) : « I. – Dans les immeubles à destination partielle ou totale d'habitation soumis à la présente loi, le syndicat des copropriétaires constitue un fonds de travaux au terme d'une période de dix ans à (…) … 2° De la réalisation des travaux prévus dans le plan pluriannuel de travaux adopté par l'assemblée générale des copropriétaires ; » [3]\n- **Article 24 — Majorité simple des voix exprimées** (loi du 10 juillet 1965) : « I. – Les décisions de l'assemblée générale sont prises à la majorité des voix exprimées des copropriétaires présents, représentés ou ayant voté par correspondance, s'il n'en est autrement ordonné par la loi. » [5]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8716550239899813,
+      "recallAt5": 0,
+      "recallAt8": 0,
+      "citationPrecision": 0,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 37 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 56,
+      "costEur": 0.00744674
+    },
+    {
+      "id": "q14",
+      "question": "Quel est le rôle du syndic de copropriété ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:18"
+      ],
+      "retrievedArticles": [
+        "65-557:17",
+        "65-557:18",
+        "65-557:29-1",
+        "65-557:21",
+        "65-557:14",
+        "65-557:22"
+      ],
+      "citedArticles": [
+        "65-557:17",
+        "65-557:18",
+        "65-557:29-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 17 — Organes du syndicat : assemblée générale, syndic, conseil syndical** (loi du 10 juillet 1965) : « Les décisions du syndicat sont prises en assemblée générale des copropriétaires ; leur exécution est confiée à un syndic placé éventuellement sous le contrôle d'un conseil syndical. » [1]\n- **Article 18 — Missions du syndic** (loi du 10 juillet 1965) : « I. – Indépendamment des pouvoirs qui lui sont conférés par d'autres dispositions de la présente loi ou par une délibération spéciale de l'assemblée générale, le syndic est chargé, dans les conditions (…) … - de réaliser les démarches prévues aux articles L. 711-1 à L. 711-6 du code de la construction et de l'habitation relatifs à l'immatriculation du syndicat de copropriétaires. » [2]\n- **Article 29-1 — Administrateur provisoire de la copropriété en difficulté** (loi du 10 juillet 1965) : « Si l'équilibre financier du syndicat des copropriétaires est gravement compromis ou si le syndicat est dans l'impossibilité de pourvoir à la conservation de l'immeuble, le président du tribunal judiciaire statuant comme en matière de référé ou sur requête peut désigner un administrateur provisoire du syndicat. » [4]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8869882422973611,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 43 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 35,
+      "costEur": 0.0076153
+    },
+    {
+      "id": "q15",
+      "question": "Quel est le rôle du conseil syndical ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:21"
+      ],
+      "retrievedArticles": [
+        "65-557:21",
+        "65-557:17",
+        "65-557:18",
+        "67-223:11",
+        "67-223:10",
+        "65-557:25",
+        "67-223:8",
+        "65-557:29-1"
+      ],
+      "citedArticles": [
+        "65-557:21",
+        "65-557:17",
+        "65-557:18"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 21 — Le conseil syndical** (loi du 10 juillet 1965) : « Dans tout syndicat de copropriétaires, un conseil syndical assiste le syndic et contrôle sa gestion. » [1]\n- **Article 17 — Organes du syndicat : assemblée générale, syndic, conseil syndical** (loi du 10 juillet 1965) : « Les décisions du syndicat sont prises en assemblée générale des copropriétaires ; leur exécution est confiée à un syndic placé éventuellement sous le contrôle d'un conseil syndical. » [2]\n- **Article 18 — Missions du syndic** (loi du 10 juillet 1965) : « II. – Le syndic assure la gestion comptable et financière du syndicat et, à ce titre, est chargé : … - d'établir le budget prévisionnel en concertation avec le conseil syndical, les comptes du syndicat et leurs annexes, de les soumettre au vote de l'assemblée générale et de tenir pour chaque syndicat une comptabilité séparée ; » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8594533126080076,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 47 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 31,
+      "costEur": 0.00740546
+    },
+    {
+      "id": "q16",
+      "question": "Combien de pouvoirs un copropriétaire peut-il recevoir en assemblée générale ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:22"
+      ],
+      "retrievedArticles": [
+        "65-557:22",
+        "65-557:17",
+        "67-223:7",
+        "67-223:8",
+        "65-557:42",
+        "65-557:21",
+        "67-223:9"
+      ],
+      "citedArticles": [
+        "65-557:22",
+        "65-557:17",
+        "67-223:7"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 22 — Voix des copropriétaires et délégations de vote** (loi du 10 juillet 1965) : « I. – Le règlement de copropriété détermine les règles de fonctionnement et les pouvoirs des assemblées générales, sous réserve des dispositions de la présente loi. » [1]\n- **Article 17 — Organes du syndicat : assemblée générale, syndic, conseil syndical** (loi du 10 juillet 1965) : « Les décisions du syndicat sont prises en assemblée générale des copropriétaires ; leur exécution est confiée à un syndic placé éventuellement sous le contrôle d'un conseil syndical. » [2]\n- **Article 7 — Tenue annuelle de l'assemblée générale** (décret du 17 mars 1967) : « Dans tout syndicat de copropriété, il est tenu, au moins une fois chaque année, une assemblée générale des copropriétaires. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.9013092459028526,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 38 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 41,
+      "costEur": 0.00645602
+    },
+    {
+      "id": "q17",
+      "question": "Un copropriétaire majoritaire peut-il imposer toutes les décisions ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:22"
+      ],
+      "retrievedArticles": [
+        "65-557:22",
+        "65-557:25",
+        "65-557:26",
+        "65-557:17",
+        "67-223:8",
+        "65-557:8",
+        "67-223:10"
+      ],
+      "citedArticles": [
+        "65-557:26",
+        "65-557:25"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 26 — Double majorité des deux tiers** (loi du 10 juillet 1965) : « L'assemblée générale ne peut, à quelque majorité que ce soit, imposer à un copropriétaire une modification à la destination de ses parties privatives ou aux modalités de leur jouissance, telles qu'elles résultent du règlement de copropriété. » [3]\n- **Article 25 — Majorité absolue des voix de tous les copropriétaires** (loi du 10 juillet 1965) : « Ne sont adoptées qu'à la majorité des voix de tous les copropriétaires les décisions concernant : » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8767468374141448,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 31 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 32,
+      "costEur": 0.00650246
+    },
+    {
+      "id": "q18",
+      "question": "Dans quel délai contester une décision d'assemblée générale ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:42",
+        "67-223:18"
+      ],
+      "retrievedArticles": [
+        "65-557:42",
+        "67-223:18",
+        "67-223:9",
+        "67-223:7",
+        "67-223:8",
+        "65-557:17",
+        "67-223:10",
+        "67-223:11"
+      ],
+      "citedArticles": [
+        "65-557:42",
+        "67-223:18",
+        "67-223:9"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 42 — Prescription et contestation des décisions d'assemblée générale** (loi du 10 juillet 1965) : « Les actions qui ont pour objet de contester les décisions des assemblées générales doivent, à peine de déchéance, être introduites par les copropriétaires opposants ou défaillants dans un délai de deux mois à compter de la notification du procès-verbal d'assemblée, sans ses annexes. Cette notification est réalisée par (…) » [1]\n- **Article 18 — Point de départ du délai de contestation des décisions** (décret du 17 mars 1967) : « Le délai prévu au deuxième alinéa de l'article 42 de la loi du 10 juillet 1965 pour contester les décisions de l'assemblée générale court à compter de la notification du procès-verbal d'assemblée à chacun des copropriétaires opposants ou défaillants. » [2]\n- **Article 9 — Contenu et délai de la convocation à l'assemblée générale** (décret du 17 mars 1967) : « La convocation contient l'indication des lieu, date et heure de la réunion, ainsi que l'ordre du jour qui précise chacune des questions soumises à la délibération de l'assemblée. A défaut de stipulation du règlement de copropriété ou de décision de l'assemblée générale, la personne qui convoque l'assemblée fixe le (…) » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8979436426741975,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.6666666666666666,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 79 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 41,
+      "costEur": 0.0072162599999999995
+    },
+    {
+      "id": "q19",
+      "question": "Les travaux votés peuvent-ils commencer pendant le délai de contestation ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:42"
+      ],
+      "retrievedArticles": [
+        "67-223:18",
+        "65-557:14-2-1",
+        "65-557:42",
+        "65-557:22",
+        "67-223:9",
+        "89-462:20-1",
+        "65-557:14-2"
+      ],
+      "citedArticles": [
+        "65-557:42",
+        "67-223:18",
+        "89-462:20-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 42 — Prescription et contestation des décisions d'assemblée générale** (loi du 10 juillet 1965) : « Les actions qui ont pour objet de contester les décisions des assemblées générales doivent, à peine de déchéance, être introduites par les copropriétaires opposants ou défaillants dans un délai de deux mois à compter de la notification du procès-verbal d'assemblée, sans ses annexes. Cette notification est réalisée par (…) » [3]\n- **Article 18 — Point de départ du délai de contestation des décisions** (décret du 17 mars 1967) : « Le délai prévu au deuxième alinéa de l'article 42 de la loi du 10 juillet 1965 pour contester les décisions de l'assemblée générale court à compter de la notification du procès-verbal d'assemblée à chacun des copropriétaires opposants ou défaillants. » [1]\n- **Article 20-1 — Mise en conformité d'un logement non décent** (loi du 6 juillet 1989) : « Le juge saisi par l'une ou l'autre des parties détermine, le cas échéant, la nature des travaux à réaliser et le délai de leur exécution. Il peut réduire le montant du loyer ou suspendre, avec ou sans consignation, son paiement et la durée du bail jusqu'à l'exécution de ces travaux. Le juge transmet au représentant de (…) » [6]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8686059815594561,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 64 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 29,
+      "costEur": 0.00787158
+    },
+    {
+      "id": "q20",
+      "question": "Quel est le délai de convocation d'une assemblée générale de copropriété ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:9"
+      ],
+      "retrievedArticles": [
+        "67-223:9",
+        "67-223:8",
+        "65-557:42",
+        "67-223:7",
+        "65-557:17",
+        "65-557:18-1",
+        "67-223:11",
+        "65-557:14-1"
+      ],
+      "citedArticles": [
+        "67-223:9",
+        "65-557:18-1",
+        "67-223:8"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 9 — Contenu et délai de la convocation à l'assemblée générale** (décret du 17 mars 1967) : « La convocation contient l'indication des lieu, date et heure de la réunion, ainsi que l'ordre du jour qui précise chacune des questions soumises à la délibération de l'assemblée. A défaut de stipulation du règlement de copropriété ou de décision de l'assemblée générale, la personne qui convoque l'assemblée fixe le (…) » [1]\n- **Article 18-1 — Consultation des pièces justificatives des charges** (loi du 10 juillet 1965) : « Pendant le délai s'écoulant entre la convocation de l'assemblée générale appelée à connaître des comptes et la tenue de celle-ci, les pièces justificatives des charges de copropriété, notamment les factures, les contrats de fourniture et d'exploitation en cours et leurs avenants ainsi que la quantité consommée et le (…) » [6]\n- **Article 8 — Convocation de l'assemblée à la demande des copropriétaires** (décret du 17 mars 1967) : « La convocation de l'assemblée est de droit lorsqu'elle est demandée au syndic soit par le conseil syndical, s'il en existe un, soit par un ou plusieurs copropriétaires représentant au moins un quart des voix de tous les copropriétaires, à moins que le règlement de copropriété ne prévoie un nombre inférieur de voix. La (…) » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.9046458176411861,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 54 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 48,
+      "costEur": 0.00733494
+    },
+    {
+      "id": "q21",
+      "question": "Comment faire inscrire une question à l'ordre du jour de l'assemblée générale ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:10"
+      ],
+      "retrievedArticles": [
+        "67-223:10",
+        "67-223:13",
+        "67-223:9",
+        "67-223:11",
+        "65-557:42",
+        "67-223:7",
+        "67-223:8",
+        "65-557:26"
+      ],
+      "citedArticles": [
+        "67-223:10",
+        "67-223:13",
+        "67-223:8"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 10 — Questions inscrites à l'ordre du jour à la demande d'un copropriétaire** (décret du 17 mars 1967) : « A tout moment, un ou plusieurs copropriétaires, ou le conseil syndical, peuvent notifier au syndic la ou les questions dont ils demandent qu'elles soient inscrites à l'ordre du jour d'une assemblée générale. Le syndic porte ces questions à l'ordre du jour de la convocation de la prochaine assemblée générale. (…) » [1]\n- **Article 13 — Décisions limitées aux questions inscrites à l'ordre du jour** (décret du 17 mars 1967) : « L'assemblée générale ne prend de décision valide que sur les questions inscrites à l'ordre du jour et dans la mesure où les notifications ont été faites conformément aux dispositions des articles 9 à 11 du présent décret. » [2]\n- **Article 8 — Convocation de l'assemblée à la demande des copropriétaires** (décret du 17 mars 1967) : « La convocation de l'assemblée est de droit lorsqu'elle est demandée au syndic soit par le conseil syndical, s'il en existe un, soit par un ou plusieurs copropriétaires représentant au moins un quart des voix de tous les copropriétaires, à moins que le règlement de copropriété ne prévoie un nombre inférieur de voix. La (…) » [7]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8804448460737162,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 63 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 27,
+      "costEur": 0.0073229
+    },
+    {
+      "id": "q22",
+      "question": "Les copropriétaires peuvent-ils forcer la convocation d'une assemblée générale ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:8"
+      ],
+      "retrievedArticles": [
+        "67-223:8",
+        "65-557:22",
+        "67-223:9",
+        "67-223:10",
+        "67-223:7",
+        "65-557:17",
+        "65-557:42"
+      ],
+      "citedArticles": [
+        "67-223:10",
+        "67-223:8",
+        "65-557:22"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 10 — Questions inscrites à l'ordre du jour à la demande d'un copropriétaire** (décret du 17 mars 1967) : « A tout moment, un ou plusieurs copropriétaires, ou le conseil syndical, peuvent notifier au syndic la ou les questions dont ils demandent qu'elles soient inscrites à l'ordre du jour d'une assemblée générale. Le syndic porte ces questions à l'ordre du jour de la convocation de la prochaine assemblée générale. (…) » [4]\n- **Article 8 — Convocation de l'assemblée à la demande des copropriétaires** (décret du 17 mars 1967) : « La convocation de l'assemblée est de droit lorsqu'elle est demandée au syndic soit par le conseil syndical, s'il en existe un, soit par un ou plusieurs copropriétaires représentant au moins un quart des voix de tous les copropriétaires, à moins que le règlement de copropriété ne prévoie un nombre inférieur de voix. La (…) » [1]\n- **Article 22 — Voix des copropriétaires et délégations de vote** (loi du 10 juillet 1965) : « Ne peuvent ni recevoir de mandat pour représenter un copropriétaire, ni présider l'assemblée générale : » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8912414182712338,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 69 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 40,
+      "costEur": 0.0069445
+    },
+    {
+      "id": "q23",
+      "question": "L'assemblée générale peut-elle voter sur une question qui n'est pas à l'ordre du jour ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:13"
+      ],
+      "retrievedArticles": [
+        "67-223:13",
+        "67-223:10",
+        "67-223:9",
+        "67-223:8",
+        "67-223:7",
+        "67-223:11",
+        "65-557:22"
+      ],
+      "citedArticles": [
+        "67-223:11",
+        "67-223:13",
+        "67-223:10"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 11 — Documents joints à la convocation** (décret du 17 mars 1967) : « Sont notifiés au plus tard en même temps que l'ordre du jour : » [6]\n- **Article 13 — Décisions limitées aux questions inscrites à l'ordre du jour** (décret du 17 mars 1967) : « L'assemblée générale ne prend de décision valide que sur les questions inscrites à l'ordre du jour et dans la mesure où les notifications ont été faites conformément aux dispositions des articles 9 à 11 du présent décret. » [1]\n- **Article 10 — Questions inscrites à l'ordre du jour à la demande d'un copropriétaire** (décret du 17 mars 1967) : « A tout moment, un ou plusieurs copropriétaires, ou le conseil syndical, peuvent notifier au syndic la ou les questions dont ils demandent qu'elles soient inscrites à l'ordre du jour d'une assemblée générale. Le syndic porte ces questions à l'ordre du jour de la convocation de la prochaine assemblée générale. (…) » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.867325456780111,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 67 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 39,
+      "costEur": 0.0065575
+    },
+    {
+      "id": "q24",
+      "question": "Quels documents doivent être joints à la convocation de l'assemblée générale ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:11"
+      ],
+      "retrievedArticles": [
+        "67-223:9",
+        "67-223:11",
+        "67-223:10",
+        "67-223:8",
+        "67-223:7",
+        "65-557:22",
+        "65-557:42",
+        "65-557:18-1"
+      ],
+      "citedArticles": [
+        "67-223:11",
+        "67-223:10",
+        "67-223:9"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 11 — Documents joints à la convocation** (décret du 17 mars 1967) : « Sont notifiés au plus tard en même temps que l'ordre du jour : … 1° L'état financier du syndicat des copropriétaires et son compte de gestion général, lorsque l'assemblée est appelée à approuver les comptes. Ces documents sont présentés avec le comparatif des comptes de l'exercice précédent approuvé ; » [2]\n- **Article 10 — Questions inscrites à l'ordre du jour à la demande d'un copropriétaire** (décret du 17 mars 1967) : « A tout moment, un ou plusieurs copropriétaires, ou le conseil syndical, peuvent notifier au syndic la ou les questions dont ils demandent qu'elles soient inscrites à l'ordre du jour d'une assemblée générale. Le syndic porte ces questions à l'ordre du jour de la convocation de la prochaine assemblée générale. (…) » [3]\n- **Article 9 — Contenu et délai de la convocation à l'assemblée générale** (décret du 17 mars 1967) : « La convocation contient l'indication des lieu, date et heure de la réunion, ainsi que l'ordre du jour qui précise chacune des questions soumises à la délibération de l'assemblée. A défaut de stipulation du règlement de copropriété ou de décision de l'assemblée générale, la personne qui convoque l'assemblée fixe le (…) » [1]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8798217224702888,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 36 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 37,
+      "costEur": 0.00724206
+    },
+    {
+      "id": "q25",
+      "question": "Qu'est-ce que l'état daté lors de la vente d'un lot ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:5"
+      ],
+      "retrievedArticles": [
+        "67-223:4",
+        "67-223:5",
+        "67-223:6",
+        "89-462:25-5",
+        "65-557:8",
+        "65-557:1",
+        "89-462:3",
+        "89-462:17-1"
+      ],
+      "citedArticles": [
+        "67-223:5",
+        "67-223:4",
+        "65-557:8"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 5 — État daté remis au notaire lors d'une vente** (décret du 17 mars 1967) : « Le syndic, avant l'établissement de l'un des actes mentionnés à l'article 4, adresse au notaire chargé de recevoir l'acte, à la demande de ce dernier ou à celle du copropriétaire qui transfère tout ou partie de ses droits sur le lot, un état daté comportant trois parties. » [2]\n- **Article 4 — Mentions obligatoires de l'acte de vente d'un lot** (décret du 17 mars 1967) : « Il en est de même en ce qui concerne l'état descriptif de division et des actes qui l'ont modifié, lorsqu'ils existent et ont été publiés. » [1]\n- **Article 8 — Règlement de copropriété** (loi du 10 juillet 1965) : « I. – Un règlement conventionnel de copropriété, incluant ou non l'état descriptif de division, détermine la destination des parties tant privatives que communes, ainsi que les conditions de leur jouissance ; il fixe également, sous réserve des dispositions de la présente loi, les règles relatives à l'administration (…) » [5]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8809378721845439,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 33 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 32,
+      "costEur": 0.0071474600000000004
+    },
+    {
+      "id": "q26",
+      "question": "Qui conserve les procès-verbaux d'assemblée générale et les archives ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "67-223:33"
+      ],
+      "retrievedArticles": [
+        "67-223:17",
+        "65-557:42",
+        "67-223:33",
+        "67-223:9",
+        "67-223:7",
+        "65-557:18",
+        "67-223:18",
+        "65-557:26"
+      ],
+      "citedArticles": [
+        "67-223:33",
+        "65-557:42",
+        "65-557:18"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 33 — Archives du syndicat détenues par le syndic** (décret du 17 mars 1967) : « Il détient, en particulier, les registres contenant les procès-verbaux des assemblées générales des copropriétaires et les pièces annexes ainsi que les documents comptables du syndicat, le carnet d'entretien de l'immeuble et, le cas échéant, les diagnostics techniques. » [3]\n- **Article 42 — Prescription et contestation des décisions d'assemblée générale** (loi du 10 juillet 1965) : « Les actions qui ont pour objet de contester les décisions des assemblées générales doivent, à peine de déchéance, être introduites par les copropriétaires opposants ou défaillants dans un délai de deux mois à compter de la notification du procès-verbal d'assemblée, sans ses annexes. Cette notification est réalisée par (…) » [2]\n- **Article 18 — Missions du syndic** (loi du 10 juillet 1965) : « I. – Indépendamment des pouvoirs qui lui sont conférés par d'autres dispositions de la présente loi ou par une délibération spéciale de l'assemblée générale, le syndic est chargé, dans les conditions qui seront éventuellement définies par décret : » [6]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8555726322873153,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 91 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 40,
+      "costEur": 0.0069531
+    },
+    {
+      "id": "q27",
+      "question": "Qu'est-ce que le budget prévisionnel et comment sont payées les provisions ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:14-1"
+      ],
+      "retrievedArticles": [
+        "65-557:14-1",
+        "67-223:5",
+        "65-557:14-2-1",
+        "67-223:11",
+        "65-557:19-2",
+        "65-557:18",
+        "89-462:3",
+        "89-462:20-1"
+      ],
+      "citedArticles": [
+        "65-557:14-1",
+        "67-223:5",
+        "65-557:14-2-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 14-1 — Budget prévisionnel et provisions** (loi du 10 juillet 1965) : « Pour faire face aux dépenses courantes de maintenance, de fonctionnement et d'administration des parties communes et équipements communs de l'immeuble, le syndicat des copropriétaires vote, chaque année, un budget prévisionnel. » [1]\n- **Article 5 — État daté remis au notaire lors d'une vente** (décret du 17 mars 1967) : « 1° Dans la première partie, le syndic indique, d'une manière même approximative et sous réserve de l'apurement des comptes, les sommes pouvant rester dues, pour le lot considéré, au syndicat par le copropriétaire cédant, au titre des provisions exigibles du budget prévisionnel, des provisions exigibles des dépenses (…) » [2]\n- **Article 14-2-1 — Fonds de travaux** (loi du 10 juillet 1965) : « II. – Le fonds de travaux est alimenté par une cotisation annuelle obligatoire. Chaque copropriétaire contribue au fonds selon les mêmes modalités que celles décidées par l'assemblée générale pour le versement des provisions du budget prévisionnel. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8640966768437658,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 60 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 41,
+      "costEur": 0.00782514
+    },
+    {
+      "id": "q28",
+      "question": "Quel est le montant minimum de la cotisation au fonds de travaux ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:14-2-1"
+      ],
+      "retrievedArticles": [
+        "65-557:14-2-1",
+        "65-557:14-2",
+        "89-462:20-1",
+        "65-557:24",
+        "89-462:7",
+        "65-557:9",
+        "65-557:10",
+        "67-223:5"
+      ],
+      "citedArticles": [
+        "65-557:14-2-1",
+        "65-557:10",
+        "67-223:5"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 14-2-1 — Fonds de travaux** (loi du 10 juillet 1965) : « II. – Le fonds de travaux est alimenté par une cotisation annuelle obligatoire. Chaque copropriétaire contribue au fonds selon les mêmes modalités que celles décidées par l'assemblée générale pour le versement des provisions du budget prévisionnel. » [1]\n- **Article 10 — Répartition des charges de copropriété** (loi du 10 juillet 1965) : « Ils sont tenus de participer aux charges relatives à la conservation, à l'entretien et à l'administration des parties communes et de verser au fonds de travaux mentionné à l'article 14-2-1 la cotisation prévue au même article, proportionnellement aux valeurs relatives des parties privatives comprises dans leurs lots, (…) » [7]\n- **Article 5 — État daté remis au notaire lors d'une vente** (décret du 17 mars 1967) : « Le syndic joint à cet état daté le montant des sommes versées au titre du fonds de travaux et rattachées au lot. » [8]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8777427381855817,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 60 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 51,
+      "costEur": 0.008466699999999999
+    },
+    {
+      "id": "q29",
+      "question": "Qu'est-ce que le plan pluriannuel de travaux ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:14-2"
+      ],
+      "retrievedArticles": [
+        "65-557:14-2",
+        "65-557:14-2-1",
+        "65-557:24",
+        "65-557:25",
+        "89-462:20-1",
+        "89-462:17-1",
+        "89-462:7"
+      ],
+      "citedArticles": [
+        "65-557:14-2",
+        "65-557:14-2-1",
+        "65-557:24"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 14-2 — Plan pluriannuel de travaux** (loi du 10 juillet 1965) : « I. – A l'expiration d'un délai de quinze ans à compter de la date de réception des travaux de construction de l'immeuble, un projet de plan pluriannuel de travaux est élaboré dans les immeubles à destination partielle ou totale d'habitation relevant du présent statut. Il est actualisé tous les dix ans. » [1]\n- **Article 14-2-1 — Fonds de travaux** (loi du 10 juillet 1965) : « I. – Dans les immeubles à destination partielle ou totale d'habitation soumis à la présente loi, le syndicat des copropriétaires constitue un fonds de travaux au terme d'une période de dix ans à (…) … 1° De l'élaboration du projet de plan pluriannuel de travaux mentionné à l'article 14-2 et, le cas échéant, du diagnostic technique global ; » [2]\n- **Article 24 — Majorité simple des voix exprimées** (loi du 10 juillet 1965) : « II. – Sont notamment approuvés dans les conditions de majorité prévues au I : … h) L'adoption de tout ou partie du projet de plan pluriannuel de travaux mentionné à l'article 14-2. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8767354708787097,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 56 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 40,
+      "costEur": 0.00832394
+    },
+    {
+      "id": "q30",
+      "question": "Que se passe-t-il si un copropriétaire ne paie pas ses charges ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:19-2",
+        "65-557:19"
+      ],
+      "retrievedArticles": [
+        "65-557:9",
+        "65-557:19-2",
+        "65-557:18-1",
+        "65-557:22",
+        "65-557:19",
+        "67-223:8",
+        "65-557:4"
+      ],
+      "citedArticles": [
+        "65-557:9",
+        "65-557:19-2",
+        "65-557:18-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 9 — Droits des copropriétaires sur leurs parties privatives et accès pour travaux** (loi du 10 juillet 1965) : « II. – Les copropriétaires qui subissent un préjudice par suite de l'exécution des travaux, en raison soit d'une diminution définitive de la valeur de leur lot, soit d'un trouble de jouissance grave, même s'il est temporaire, soit de dégradations, ont droit à une indemnité. Cette indemnité est à la charge du syndicat (…) » [1]\n- **Article 19-2 — Impayés de charges : exigibilité anticipée des provisions** (loi du 10 juillet 1965) : « Le président du tribunal judiciaire statuant selon la procédure accélérée au fond, après avoir constaté, selon le cas, l'approbation par l'assemblée générale des copropriétaires du budget prévisionnel, des travaux ou des comptes annuels, ainsi que la défaillance du copropriétaire, condamne ce dernier au paiement des (…) » [2]\n- **Article 18-1 — Consultation des pièces justificatives des charges** (loi du 10 juillet 1965) : « Pendant le délai s'écoulant entre la convocation de l'assemblée générale appelée à connaître des comptes et la tenue de celle-ci, les pièces justificatives des charges de copropriété, notamment les factures, les contrats de fourniture et d'exploitation en cours et leurs avenants ainsi que la quantité consommée et le (…) » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8623826235812853,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 32 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 45,
+      "costEur": 0.007395140000000001
+    },
+    {
+      "id": "q31",
+      "question": "Quand un administrateur provisoire peut-il être désigné pour une copropriété ?",
+      "category": "copropriete",
+      "expectedArticles": [
+        "65-557:29-1"
+      ],
+      "retrievedArticles": [
+        "65-557:29-1",
+        "65-557:8",
+        "65-557:26",
+        "65-557:17",
+        "65-557:22",
+        "65-557:9",
+        "65-557:14-1",
+        "65-557:19"
+      ],
+      "citedArticles": [
+        "65-557:29-1",
+        "65-557:17",
+        "65-557:14-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 29-1 — Administrateur provisoire de la copropriété en difficulté** (loi du 10 juillet 1965) : « Si l'équilibre financier du syndicat des copropriétaires est gravement compromis ou si le syndicat est dans l'impossibilité de pourvoir à la conservation de l'immeuble, le président du tribunal judiciaire statuant comme en matière de référé ou sur requête peut désigner un administrateur provisoire du syndicat. » [1]\n- **Article 17 — Organes du syndicat : assemblée générale, syndic, conseil syndical** (loi du 10 juillet 1965) : « Dans les cas où, avant la réunion de la première assemblée générale suivant la mise en copropriété, un syndic provisoire a été désigné par le règlement de copropriété ou par tout autre accord des parties, ce syndic ne peut être maintenu que par décision de l'assemblée générale, après mise en concurrence préalable de (…) » [4]\n- **Article 14-1 — Budget prévisionnel et provisions** (loi du 10 juillet 1965) : « Pour faire face aux dépenses courantes de maintenance, de fonctionnement et d'administration des parties communes et équipements communs de l'immeuble, le syndicat des copropriétaires vote, chaque année, un budget prévisionnel. » [7]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8972004406930066,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 75 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 35,
+      "costEur": 0.00777526
+    },
+    {
+      "id": "q32",
+      "question": "Quelle est la durée minimale d'un bail de location vide ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:10"
+      ],
+      "retrievedArticles": [
+        "89-462:10",
+        "89-462:25-7",
+        "89-462:22",
+        "89-462:25-8",
+        "89-462:25-6",
+        "89-462:3",
+        "89-462:12"
+      ],
+      "citedArticles": [
+        "89-462:10",
+        "89-462:25-7",
+        "89-462:22"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 10 — Durée du bail d'un logement vide** (loi du 6 juillet 1989) : « Le contrat de location est conclu pour une durée au moins égale à trois ans pour les bailleurs personnes physiques ainsi que pour les bailleurs définis à l'article 13 et à six ans pour les bailleurs personnes morales. » [1]\n- **Article 25-7 — Durée du bail meublé et bail étudiant de neuf mois** (loi du 6 juillet 1989) : « Lorsque la location est consentie à un étudiant, la durée du bail peut être de neuf mois. Dans ce cas, la clause de reconduction tacite prévue au troisième alinéa est inapplicable. » [2]\n- **Article 22 — Dépôt de garantie (logement vide)** (loi du 6 juillet 1989) : « Lorsqu'un dépôt de garantie est prévu par le contrat de location pour garantir l'exécution de ses obligations locatives par le locataire, il ne peut être supérieur à un mois de loyer en principal. Au moment de la signature du bail, le dépôt de garantie est versé au bailleur directement par le locataire ou par (…) » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8740669488906923,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 82 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 34,
+      "costEur": 0.00665898
+    },
+    {
+      "id": "q33",
+      "question": "Quel est le préavis du locataire pour quitter un logement vide ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:15",
+        "89-462:12"
+      ],
+      "retrievedArticles": [
+        "89-462:15",
+        "89-462:22",
+        "89-462:25-8",
+        "89-462:1",
+        "89-462:3",
+        "89-462:6"
+      ],
+      "citedArticles": [
+        "89-462:15",
+        "89-462:22",
+        "89-462:25-8"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 15 — Congé du bailleur et préavis du locataire** (loi du 6 juillet 1989) : « I. – Lorsque le bailleur donne congé à son locataire, ce congé doit être justifié soit par sa décision de reprendre ou de vendre le logement, soit par un motif légitime et sérieux, notamment l'inexécution par le locataire de l'une des obligations lui incombant. A peine de nullité, le congé donné par le bailleur doit (…) » [1]\n- **Article 22 — Dépôt de garantie (logement vide)** (loi du 6 juillet 1989) : « Lorsqu'un dépôt de garantie est prévu par le contrat de location pour garantir l'exécution de ses obligations locatives par le locataire, il ne peut être supérieur à un mois de loyer en principal. Au moment de la signature du bail, le dépôt de garantie est versé au bailleur directement par le locataire ou par (…) » [3]\n- **Article 25-8 — Congé en location meublée** (loi du 6 juillet 1989) : « Le bailleur qui ne souhaite pas renouveler le contrat doit informer le locataire en respectant le même préavis et motiver son refus de renouvellement du bail soit par sa décision de reprendre ou de vendre le logement, soit par un motif sérieux et légitime, notamment l'inexécution par le locataire de l'une des (…) » [5]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8676374037481918,
+      "recallAt5": 0.5,
+      "recallAt8": 0.5,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 2,
+      "judgeRationale": "Évaluation simulée : 21 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 27,
+      "costEur": 0.0084581
+    },
+    {
+      "id": "q34",
+      "question": "Pour quels motifs le propriétaire peut-il donner congé au locataire ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:15"
+      ],
+      "retrievedArticles": [
+        "89-462:15",
+        "89-462:25-8",
+        "89-462:22",
+        "89-462:20-1",
+        "89-462:7",
+        "89-462:1"
+      ],
+      "citedArticles": [
+        "89-462:15",
+        "89-462:25-8",
+        "89-462:20-1"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 15 — Congé du bailleur et préavis du locataire** (loi du 6 juillet 1989) : « I. – Lorsque le bailleur donne congé à son locataire, ce congé doit être justifié soit par sa décision de reprendre ou de vendre le logement, soit par un motif légitime et sérieux, notamment l'inexécution par le locataire de l'une des obligations lui incombant. A peine de nullité, le congé donné par le bailleur doit (…) » [1]\n- **Article 25-8 — Congé en location meublée** (loi du 6 juillet 1989) : « I. – Le locataire peut résilier le contrat à tout moment, sous réserve du respect d'un préavis d'un mois, y compris lorsque la durée du bail est réduite à neuf mois. » [2]\n- **Article 20-1 — Mise en conformité d'un logement non décent** (loi du 6 juillet 1989) : « Si le logement loué ne satisfait pas aux dispositions des premier et deuxième alinéas de l'article 6, le locataire peut demander au propriétaire sa mise en conformité sans qu'il soit porté atteinte à la validité du contrat en cours. » [6]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8814686435293866,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 4,
+      "judgeRationale": "Évaluation simulée : 64 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 36,
+      "costEur": 0.007500059999999999
+    },
+    {
+      "id": "q35",
+      "question": "Quel est le montant maximum du dépôt de garantie pour une location vide ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:22"
+      ],
+      "retrievedArticles": [
+        "89-462:22",
+        "89-462:25-6",
+        "89-462:3",
+        "89-462:10",
+        "89-462:25-8",
+        "89-462:17",
+        "89-462:22-1"
+      ],
+      "citedArticles": [
+        "89-462:22",
+        "89-462:25-6",
+        "89-462:3"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 22 — Dépôt de garantie (logement vide)** (loi du 6 juillet 1989) : « Le montant de ce dépôt de garantie ne porte pas intérêt au bénéfice du locataire. Il ne doit faire l'objet d'aucune révision durant l'exécution du contrat de location, éventuellement renouvelé. » [2]\n- **Article 25-6 — Dépôt de garantie en location meublée** (loi du 6 juillet 1989) : « Par dérogation à l'article 22, le montant du dépôt de garantie exigible par le bailleur est limité à deux mois de loyer en principal. » [3]\n- **Article 3 — Contenu du contrat de location** (loi du 6 juillet 1989) : « Le contrat de location précise notamment : … 10° Le montant du dépôt de garantie, si celui-ci est prévu. » [4]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8916303321654594,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 75 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 28,
+      "costEur": 0.0066761799999999994
+    },
+    {
+      "id": "q36",
+      "question": "Dans quel délai le dépôt de garantie doit-il être restitué ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:22"
+      ],
+      "retrievedArticles": [
+        "89-462:22",
+        "89-462:25-6",
+        "89-462:15",
+        "89-462:25-8",
+        "89-462:10",
+        "89-462:7"
+      ],
+      "citedArticles": [
+        "89-462:22"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 22 — Dépôt de garantie (logement vide)** (loi du 6 juillet 1989) : « Lorsqu'un dépôt de garantie est prévu par le contrat de location pour garantir l'exécution de ses obligations locatives par le locataire, il ne peut être supérieur à un mois de loyer en principal. Au moment de la signature du bail, le dépôt de garantie est versé au bailleur directement par le locataire ou par (…) » [1]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8987507699431482,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 1,
+      "citationGroundedness": 1,
+      "judgeScore": 2,
+      "judgeRationale": "Évaluation simulée : 15 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 33,
+      "costEur": 0.00569406
+    },
+    {
+      "id": "q37",
+      "question": "Quel dépôt de garantie pour un logement meublé ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:25-6"
+      ],
+      "retrievedArticles": [
+        "89-462:22",
+        "89-462:25-6",
+        "89-462:25-4",
+        "89-462:25-3",
+        "89-462:25-9",
+        "89-462:6",
+        "89-462:3"
+      ],
+      "citedArticles": [
+        "89-462:22",
+        "89-462:25-6",
+        "89-462:3"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 22 — Dépôt de garantie (logement vide)** (loi du 6 juillet 1989) : « Lorsqu'un dépôt de garantie est prévu par le contrat de location pour garantir l'exécution de ses obligations locatives par le locataire, il ne peut être supérieur à un mois de loyer en principal. Au moment de la signature du bail, le dépôt de garantie est versé au bailleur directement par le locataire ou par (…) » [1]\n- **Article 25-6 — Dépôt de garantie en location meublée** (loi du 6 juillet 1989) : « Par dérogation à l'article 22, le montant du dépôt de garantie exigible par le bailleur est limité à deux mois de loyer en principal. » [2]\n- **Article 3 — Contenu du contrat de location** (loi du 6 juillet 1989) : « Le contrat de location précise notamment : … 10° Le montant du dépôt de garantie, si celui-ci est prévu. » [8]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8942093975294418,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 100 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 27,
+      "costEur": 0.00644914
+    },
+    {
+      "id": "q38",
+      "question": "Quelle est la durée d'un bail meublé pour un étudiant ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:25-7"
+      ],
+      "retrievedArticles": [
+        "89-462:25-7",
+        "89-462:10",
+        "89-462:25-8",
+        "89-462:25-4",
+        "89-462:25-3",
+        "89-462:25-6",
+        "89-462:25-9",
+        "89-462:22-1"
+      ],
+      "citedArticles": [
+        "89-462:25-7",
+        "89-462:25-8"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 25-7 — Durée du bail meublé et bail étudiant de neuf mois** (loi du 6 juillet 1989) : « Lorsque la location est consentie à un étudiant, la durée du bail peut être de neuf mois. Dans ce cas, la clause de reconduction tacite prévue au troisième alinéa est inapplicable. » [1]\n- **Article 25-8 — Congé en location meublée** (loi du 6 juillet 1989) : « I. – Le locataire peut résilier le contrat à tout moment, sous réserve du respect d'un préavis d'un mois, y compris lorsque la durée du bail est réduite à neuf mois. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.894760583582089,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.5,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 88 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 38,
+      "costEur": 0.0047583799999999996
+    },
+    {
+      "id": "q39",
+      "question": "Comment est révisé le loyer chaque année ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:17-1"
+      ],
+      "retrievedArticles": [
+        "89-462:17-1",
+        "89-462:25-9",
+        "89-462:17-2",
+        "89-462:3",
+        "89-462:17",
+        "65-557:14-1",
+        "89-462:22"
+      ],
+      "citedArticles": [
+        "89-462:17-1",
+        "89-462:17-2"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 17-1 — Révision annuelle du loyer (IRL)** (loi du 6 juillet 1989) : « A défaut de manifester sa volonté d'appliquer la révision du loyer dans un délai d'un an suivant sa date de prise d'effet, le bailleur est réputé avoir renoncé au bénéfice de cette clause pour l'année écoulée. Si le bailleur manifeste sa volonté de réviser le loyer dans le délai d'un an, cette révision de loyer prend (…) » [1]\n- **Article 17-2 — Réévaluation du loyer manifestement sous-évalué lors du renouvellement** (loi du 6 juillet 1989) : « En cas de désaccord ou à défaut de réponse du locataire quatre mois avant le terme du contrat, l'une ou l'autre des parties peut saisir la commission départementale de conciliation. A défaut d'accord constaté par la commission, le juge est saisi avant le terme du contrat. A défaut de saisine, le contrat est reconduit (…) » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8823421527352502,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.5,
+      "citationGroundedness": 1,
+      "judgeScore": 2,
+      "judgeRationale": "Évaluation simulée : 22 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 29,
+      "costEur": 0.007372780000000001
+    },
+    {
+      "id": "q40",
+      "question": "Quelles sont les obligations du bailleur envers son locataire ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:6"
+      ],
+      "retrievedArticles": [
+        "89-462:6",
+        "89-462:22-1",
+        "89-462:7",
+        "89-462:15",
+        "89-462:22",
+        "89-462:25-8"
+      ],
+      "citedArticles": [
+        "89-462:6",
+        "89-462:22-1",
+        "89-462:7"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 6 — Obligations du bailleur et logement décent** (loi du 6 juillet 1989) : « Le bailleur est tenu de remettre au locataire un logement décent ne laissant pas apparaître de risques manifestes pouvant porter atteinte à la sécurité physique ou à la santé, répondant à un critère de performance énergétique minimale et doté des éléments le rendant conforme à l'usage d'habitation. » [1]\n- **Article 22-1 — Cautionnement des obligations du locataire** (loi du 6 juillet 1989) : « Le cautionnement ne peut pas être demandé, à peine de nullité, par un bailleur qui a souscrit une assurance, ou toute autre forme de garantie, garantissant les obligations locatives du locataire, sauf en cas de logement loué à un étudiant ou un apprenti. » [2]\n- **Article 7 — Obligations du locataire** (loi du 6 juillet 1989) : « Le locataire est obligé : … g) De s'assurer contre les risques dont il doit répondre en sa qualité de locataire et d'en justifier lors de la remise des clés puis, chaque année, à la demande du bailleur. A défaut de la remise de l'attestation d'assurance et après un délai d'un mois à compter d'une mise en demeure non suivie d'effet, le bailleur (…) » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8933369048432289,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 43 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 37,
+      "costEur": 0.00843746
+    },
+    {
+      "id": "q41",
+      "question": "Un logement classé G au DPE peut-il encore être loué ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:6"
+      ],
+      "retrievedArticles": [
+        "89-462:6",
+        "89-462:20-1",
+        "89-462:17-2",
+        "89-462:17-1",
+        "89-462:17",
+        "89-462:22",
+        "89-462:1",
+        "89-462:25-4"
+      ],
+      "citedArticles": [
+        "89-462:6",
+        "89-462:20-1",
+        "89-462:17-2"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 6 — Obligations du bailleur et logement décent** (loi du 6 juillet 1989) : « Le niveau de performance énergétique d'un logement décent est compris, à compter du 1er janvier 2025, entre la classe A et la classe F ; à compter du 1er janvier 2028, entre la classe A et la classe E ; à compter du 1er janvier 2034, entre la classe A et la classe D. » [1]\n- **Article 20-1 — Mise en conformité d'un logement non décent** (loi du 6 juillet 1989) : « Si le logement loué ne satisfait pas aux dispositions des premier et deuxième alinéas de l'article 6, le locataire peut demander au propriétaire sa mise en conformité sans qu'il soit porté atteinte à la validité du contrat en cours. » [2]\n- **Article 17-2 — Réévaluation du loyer manifestement sous-évalué lors du renouvellement** (loi du 6 juillet 1989) : « II. – Dans les logements dont le niveau de performance énergétique est classé F ou G, le loyer ne peut faire l'objet d'aucune réévaluation lors du renouvellement du contrat. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.856821417808557,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 82 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 38,
+      "costEur": 0.007472540000000001
+    },
+    {
+      "id": "q42",
+      "question": "Le locataire doit-il souscrire une assurance habitation ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:7"
+      ],
+      "retrievedArticles": [
+        "89-462:7",
+        "89-462:15",
+        "89-462:25-8",
+        "89-462:22-1",
+        "89-462:12",
+        "89-462:22",
+        "89-462:6"
+      ],
+      "citedArticles": [
+        "89-462:7",
+        "89-462:22-1",
+        "89-462:6"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 7 — Obligations du locataire** (loi du 6 juillet 1989) : « g) De s'assurer contre les risques dont il doit répondre en sa qualité de locataire et d'en justifier lors de la remise des clés puis, chaque année, à la demande du bailleur. A défaut de la remise de l'attestation d'assurance et après un délai d'un mois à compter d'une mise en demeure non suivie d'effet, le bailleur (…) » [1]\n- **Article 22-1 — Cautionnement des obligations du locataire** (loi du 6 juillet 1989) : « Le cautionnement ne peut pas être demandé, à peine de nullité, par un bailleur qui a souscrit une assurance, ou toute autre forme de garantie, garantissant les obligations locatives du locataire, sauf en cas de logement loué à un étudiant ou un apprenti. » [4]\n- **Article 6 — Obligations du bailleur et logement décent** (loi du 6 juillet 1989) : « Le bailleur est tenu de remettre au locataire un logement décent ne laissant pas apparaître de risques manifestes pouvant porter atteinte à la sécurité physique ou à la santé, répondant à un critère de performance énergétique minimale et doté des éléments le rendant conforme à l'usage d'habitation. » [7]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8802072859057591,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 100 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 34,
+      "costEur": 0.007451900000000001
+    },
+    {
+      "id": "q43",
+      "question": "Que faire si mon logement loué n'est pas décent ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:20-1",
+        "89-462:6"
+      ],
+      "retrievedArticles": [
+        "89-462:20-1",
+        "89-462:6",
+        "89-462:25-4",
+        "89-462:25-9",
+        "89-462:3",
+        "89-462:22",
+        "89-462:17-2",
+        "89-462:1"
+      ],
+      "citedArticles": [
+        "89-462:20-1",
+        "89-462:6",
+        "89-462:25-4"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 20-1 — Mise en conformité d'un logement non décent** (loi du 6 juillet 1989) : « Si le logement loué ne satisfait pas aux dispositions des premier et deuxième alinéas de l'article 6, le locataire peut demander au propriétaire sa mise en conformité sans qu'il soit porté atteinte à la validité du contrat en cours. » [1]\n- **Article 6 — Obligations du bailleur et logement décent** (loi du 6 juillet 1989) : « Le bailleur est tenu de remettre au locataire un logement décent ne laissant pas apparaître de risques manifestes pouvant porter atteinte à la sécurité physique ou à la santé, répondant à un critère de performance énergétique minimale et doté des éléments le rendant conforme à l'usage d'habitation. » [2]\n- **Article 25-4 — Définition du logement meublé** (loi du 6 juillet 1989) : « Un logement meublé est un logement décent équipé d'un mobilier en nombre et en qualité suffisants pour permettre au locataire d'y dormir, manger et vivre convenablement au regard des exigences de la vie courante. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8641288633576999,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.6666666666666666,
+      "citationGroundedness": 1,
+      "judgeScore": 3,
+      "judgeRationale": "Évaluation simulée : 33 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 30,
+      "costEur": 0.0075035
+    },
+    {
+      "id": "q44",
+      "question": "Le bailleur peut-il exiger une caution s'il a une assurance loyers impayés ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:22-1"
+      ],
+      "retrievedArticles": [
+        "89-462:22-1",
+        "89-462:6",
+        "89-462:22",
+        "89-462:7",
+        "89-462:17-1",
+        "89-462:17-2",
+        "89-462:15"
+      ],
+      "citedArticles": [
+        "89-462:22-1",
+        "89-462:7",
+        "89-462:22"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 22-1 — Cautionnement des obligations du locataire** (loi du 6 juillet 1989) : « Le cautionnement ne peut pas être demandé, à peine de nullité, par un bailleur qui a souscrit une assurance, ou toute autre forme de garantie, garantissant les obligations locatives du locataire, sauf en cas de logement loué à un étudiant ou un apprenti. » [1]\n- **Article 7 — Obligations du locataire** (loi du 6 juillet 1989) : « Le locataire est obligé : … g) De s'assurer contre les risques dont il doit répondre en sa qualité de locataire et d'en justifier lors de la remise des clés puis, chaque année, à la demande du bailleur. A défaut de la remise de l'attestation d'assurance et après un délai d'un mois à compter d'une mise en demeure non suivie d'effet, le bailleur (…) » [4]\n- **Article 22 — Dépôt de garantie (logement vide)** (loi du 6 juillet 1989) : « Un dépôt de garantie ne peut être prévu lorsque le loyer est payable d'avance pour une période supérieure à deux mois ; toutefois, si le locataire demande le bénéfice du paiement mensuel du loyer, par application de l'article 7, le bailleur peut exiger un dépôt de garantie. » [3]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.880688402632228,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 100 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 37,
+      "costEur": 0.00854238
+    },
+    {
+      "id": "q45",
+      "question": "Qu'est-ce qu'un logement meublé au sens de la loi ?",
+      "category": "bail",
+      "expectedArticles": [
+        "89-462:25-4"
+      ],
+      "retrievedArticles": [
+        "89-462:25-9",
+        "89-462:25-4",
+        "89-462:25-3",
+        "89-462:17",
+        "89-462:20-1",
+        "89-462:1",
+        "89-462:25-6",
+        "89-462:3"
+      ],
+      "citedArticles": [
+        "89-462:25-3",
+        "89-462:25-9",
+        "89-462:25-4"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 25-3 — Champ d'application du régime des locations meublées** (loi du 6 juillet 1989) : « Les dispositions du présent titre sont d'ordre public et s'appliquent aux contrats de bail portant sur des logements meublés, tels que définis à l'article 25-4, dès lors qu'ils constituent la résidence principale du preneur, au sens de l'article 2. » [3]\n- **Article 25-9 — Loyer des logements meublés en zone tendue (extrait)** (loi du 6 juillet 1989) : « I. – Pour l'application aux logements meublés des dispositions relatives au niveau des loyers dans les zones mentionnées au I de l'article 17, le loyer de référence et le loyer de référence majoré sont déterminés par l'application d'une majoration unitaire par mètre carré aux loyers de référence définis pour les (…) » [1]\n- **Article 25-4 — Définition du logement meublé** (loi du 6 juillet 1989) : « Un logement meublé est un logement décent équipé d'un mobilier en nombre et en qualité suffisants pour permettre au locataire d'y dormir, manger et vivre convenablement au regard des exigences de la vie courante. » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.9118757300451108,
+      "recallAt5": 1,
+      "recallAt8": 1,
+      "citationPrecision": 0.3333333333333333,
+      "citationGroundedness": 1,
+      "judgeScore": 5,
+      "judgeRationale": "Évaluation simulée : 81 % des notions de la réponse de référence retrouvées.",
+      "latencyMs": 33,
+      "costEur": 0.00643882
+    },
+    {
+      "id": "q46",
+      "question": "Comment sont imposés les revenus fonciers en location nue ?",
+      "category": "hors-corpus",
+      "expectedArticles": [],
+      "retrievedArticles": [
+        "89-462:17",
+        "89-462:25-3",
+        "89-462:3",
+        "89-462:1",
+        "89-462:22",
+        "89-462:7",
+        "89-462:6",
+        "89-462:17-1"
+      ],
+      "citedArticles": [],
+      "answer": "Je ne trouve pas de réponse fiable à cette question dans les textes dont je dispose (loi du 10 juillet 1965, décret du 17 mars 1967, loi du 6 juillet 1989). Je préfère ne pas improviser : consultez le texte officiel sur [Légifrance](https://www.legifrance.gouv.fr) ou un conseiller juriste de l'[ANIL / ADIL](https://www.anil.org) près de chez vous.",
+      "refused": true,
+      "bestSimilarity": 0.8562396593379629,
+      "recallAt5": null,
+      "recallAt8": null,
+      "citationPrecision": null,
+      "citationGroundedness": null,
+      "judgeScore": 5,
+      "judgeRationale": "Refus attendu pour une question hors corpus.",
+      "latencyMs": 31,
+      "costEur": 0.00505766
+    },
+    {
+      "id": "q47",
+      "question": "Quelle est la recette de la blanquette de veau ?",
+      "category": "hors-corpus",
+      "expectedArticles": [],
+      "retrievedArticles": [
+        "89-462:7",
+        "89-462:15",
+        "67-223:11",
+        "65-557:14-2-1",
+        "89-462:3",
+        "89-462:20-1",
+        "89-462:22",
+        "89-462:6"
+      ],
+      "citedArticles": [],
+      "answer": "Je ne trouve pas de réponse fiable à cette question dans les textes dont je dispose (loi du 10 juillet 1965, décret du 17 mars 1967, loi du 6 juillet 1989). Je préfère ne pas improviser : consultez le texte officiel sur [Légifrance](https://www.legifrance.gouv.fr) ou un conseiller juriste de l'[ANIL / ADIL](https://www.anil.org) près de chez vous.",
+      "refused": true,
+      "bestSimilarity": 0.7994738700828184,
+      "recallAt5": null,
+      "recallAt8": null,
+      "citationPrecision": null,
+      "citationGroundedness": null,
+      "judgeScore": 5,
+      "judgeRationale": "Refus attendu pour une question hors corpus.",
+      "latencyMs": 39,
+      "costEur": 0
+    },
+    {
+      "id": "q48",
+      "question": "Quelles sont les règles de la garde alternée des enfants après un divorce ?",
+      "category": "hors-corpus",
+      "expectedArticles": [],
+      "retrievedArticles": [
+        "65-557:26",
+        "65-557:8",
+        "65-557:22",
+        "65-557:18",
+        "67-223:11",
+        "89-462:15",
+        "65-557:25",
+        "67-223:9"
+      ],
+      "citedArticles": [],
+      "answer": "Je ne trouve pas de réponse fiable à cette question dans les textes dont je dispose (loi du 10 juillet 1965, décret du 17 mars 1967, loi du 6 juillet 1989). Je préfère ne pas improviser : consultez le texte officiel sur [Légifrance](https://www.legifrance.gouv.fr) ou un conseiller juriste de l'[ANIL / ADIL](https://www.anil.org) près de chez vous.",
+      "refused": true,
+      "bestSimilarity": 0.8277569310520265,
+      "recallAt5": null,
+      "recallAt8": null,
+      "citationPrecision": null,
+      "citationGroundedness": null,
+      "judgeScore": 5,
+      "judgeRationale": "Refus attendu pour une question hors corpus.",
+      "latencyMs": 65,
+      "costEur": 0
+    },
+    {
+      "id": "q49",
+      "question": "Comment créer une SASU et quel capital minimum prévoir ?",
+      "category": "hors-corpus",
+      "expectedArticles": [],
+      "retrievedArticles": [
+        "65-557:10",
+        "67-223:11",
+        "65-557:1",
+        "89-462:15",
+        "65-557:8",
+        "65-557:25",
+        "65-557:18",
+        "65-557:14"
+      ],
+      "citedArticles": [],
+      "answer": "Je ne trouve pas de réponse fiable à cette question dans les textes dont je dispose (loi du 10 juillet 1965, décret du 17 mars 1967, loi du 6 juillet 1989). Je préfère ne pas improviser : consultez le texte officiel sur [Légifrance](https://www.legifrance.gouv.fr) ou un conseiller juriste de l'[ANIL / ADIL](https://www.anil.org) près de chez vous.",
+      "refused": true,
+      "bestSimilarity": 0.812107544228602,
+      "recallAt5": null,
+      "recallAt8": null,
+      "citationPrecision": null,
+      "citationGroundedness": null,
+      "judgeScore": 5,
+      "judgeRationale": "Refus attendu pour une question hors corpus.",
+      "latencyMs": 29,
+      "costEur": 0
+    },
+    {
+      "id": "q50",
+      "question": "Quelle est la durée d'un bail commercial 3-6-9 et comment le résilier ?",
+      "category": "hors-corpus",
+      "expectedArticles": [],
+      "retrievedArticles": [
+        "89-462:10",
+        "89-462:25-7",
+        "89-462:12",
+        "89-462:25-8",
+        "89-462:3",
+        "89-462:25-6",
+        "89-462:20-1",
+        "89-462:25-3"
+      ],
+      "citedArticles": [
+        "89-462:25-8",
+        "89-462:10",
+        "89-462:25-7"
+      ],
+      "answer": "D'après les textes applicables, voici les dispositions les plus pertinentes :\n\n- **Article 25-8 — Congé en location meublée** (loi du 6 juillet 1989) : « I. – Le locataire peut résilier le contrat à tout moment, sous réserve du respect d'un préavis d'un mois, y compris lorsque la durée du bail est réduite à neuf mois. » [4]\n- **Article 10 — Durée du bail d'un logement vide** (loi du 6 juillet 1989) : « Le contrat de location est conclu pour une durée au moins égale à trois ans pour les bailleurs personnes physiques ainsi que pour les bailleurs définis à l'article 13 et à six ans pour les bailleurs personnes morales. » [1]\n- **Article 25-7 — Durée du bail meublé et bail étudiant de neuf mois** (loi du 6 juillet 1989) : « Lorsque la location est consentie à un étudiant, la durée du bail peut être de neuf mois. Dans ce cas, la clause de reconduction tacite prévue au troisième alinéa est inapplicable. » [2]\n\n_Réponse générée par le fournisseur simulé (mode démo hors ligne) : elle cite les passages pertinents sans les reformuler. Il s'agit d'une information juridique générale, pas d'un conseil personnalisé ; le texte en vigueur sur Légifrance fait foi._",
+      "refused": false,
+      "bestSimilarity": 0.8730705607407422,
+      "recallAt5": null,
+      "recallAt8": null,
+      "citationPrecision": null,
+      "citationGroundedness": 1,
+      "judgeScore": 1,
+      "judgeRationale": "Aurait dû refuser : question hors corpus.",
+      "latencyMs": 29,
+      "costEur": 0.0058351
+    }
+  ]
+}

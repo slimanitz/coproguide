@@ -1,0 +1,11 @@
+allowBuilds:
+  esbuild: true
+  onnxruntime-node: true
+  protobufjs: true
+  sharp: true
+  unrs-resolver: true
+  '@tailwindcss/oxide': true
+minimumReleaseAgeExclude:
+  - '@anthropic-ai/sdk@0.132.1'
+  - drizzle-orm@0.45.4
+  - graphql-yoga@5.24.4

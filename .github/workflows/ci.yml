@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: coproguide
+          POSTGRES_PASSWORD: coproguide
+          POSTGRES_DB: coproguide
+        ports:
+          - 5438:5432
+        options: >-
+          --health-cmd "pg_isready -U coproguide -d coproguide"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgres://coproguide:coproguide@localhost:5438/coproguide
+      LLM_PROVIDER: mock
+      MOCK_STREAM_DELAY_MS: "0"
+      MODEL_CACHE_DIR: .cache/models
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.5.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Cache embedding model
+        uses: actions/cache@v4
+        with:
+          path: .cache/models
+          key: e5-small-q8-v1
+      - run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
+      - name: Tests (unit + integration against pgvector)
+        run: pnpm test
+      - name: Ingest + offline eval smoke run
+        run: |
+          pnpm ingest
+          pnpm eval --name ci-mock --limit 10
+      - name: Build
+        run: pnpm build
+
+  docker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: coproguide:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

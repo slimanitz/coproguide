@@ -1,0 +1,19 @@
+---
+law: "Loi n° 89-462 du 6 juillet 1989 tendant à améliorer les rapports locatifs"
+law_code: "89-462"
+article: "Article 17-1"
+title: "Révision annuelle du loyer (IRL)"
+legifrance_url: "https://www.legifrance.gouv.fr/loda/id/LEGITEXT000006069108"
+version_date: "2025-01-01"
+source: "manual-extract"
+---
+
+I. – Lorsque le contrat prévoit la révision du loyer, celle-ci intervient chaque année à la date convenue entre les parties ou, à défaut, au terme de chaque année du contrat.
+
+L'augmentation du loyer qui en résulte ne peut excéder la variation d'un indice de référence des loyers publié par l'Institut national de la statistique et des études économiques chaque trimestre et qui correspond à la moyenne, sur les douze derniers mois, de l'évolution des prix à la consommation hors tabac et hors loyers. A défaut de clause contractuelle fixant la date de référence, cette date de référence est celle du dernier indice publié à la date de signature du contrat de location.
+
+A défaut de manifester sa volonté d'appliquer la révision du loyer dans un délai d'un an suivant sa date de prise d'effet, le bailleur est réputé avoir renoncé au bénéfice de cette clause pour l'année écoulée. Si le bailleur manifeste sa volonté de réviser le loyer dans le délai d'un an, cette révision de loyer prend effet à compter de sa demande.
+
+Dans les logements dont le niveau de performance énergétique est classé F ou G, aucune révision du loyer ne peut être appliquée.
+
+II. – Lorsque les parties sont convenues, par une clause expresse, de travaux d'amélioration du logement que le bailleur fera exécuter, le contrat de location ou un avenant à ce contrat peut fixer la majoration du loyer consécutive à la réalisation de ces travaux.
