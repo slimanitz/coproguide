@@ -17,7 +17,7 @@ export interface GenerateParams {
 export type LlmEvent = { type: "text"; text: string } | { type: "usage"; usage: TokenUsage; model: string };
 
 export interface LlmProvider {
-  readonly name: "mock" | "anthropic";
+  readonly name: "mock" | "openai" | "anthropic";
   readonly model: string;
   stream(params: GenerateParams): AsyncIterable<LlmEvent>;
 }

@@ -35,6 +35,7 @@
     "graphql-yoga": "5.24.4",
     "gray-matter": "4.0.3",
     "next": "15.5.27",
+    "openai": "7.31.0",
     "postgres": "3.4.9",
     "react": "19.3.0",
     "react-dom": "19.3.0",

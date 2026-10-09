@@ -25,7 +25,7 @@ export const typeDefs = /* GraphQL */ `
     """
     Starts the golden-set evaluation in the background and returns the run id.
     Refused (FORBIDDEN / CONFLICT / RATE_LIMITED) when another run is in progress, when the
-    hourly limit is reached, or, with LLM_PROVIDER=anthropic, without a valid x-admin-token header.
+    hourly limit is reached, or, with a paid provider (openai, anthropic), without a valid x-admin-token header.
     """
     runEval(name: String): ID!
   }

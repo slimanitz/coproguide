@@ -27,6 +27,8 @@ describe("checkEvalStart", () => {
   });
 
   it("refuses paid runs when ADMIN_TOKEN is not configured, or the header is missing or wrong", () => {
+    expect(codeOf({ ...base, provider: "openai" })).toBe("FORBIDDEN");
+    expect(codeOf({ ...base, provider: "openai", configuredToken: "s3cret", providedToken: "s3cret" })).toBeNull();
     expect(codeOf({ ...base, provider: "anthropic" })).toBe("FORBIDDEN");
     expect(codeOf({ ...base, provider: "anthropic", configuredToken: "s3cret" })).toBe("FORBIDDEN");
     expect(codeOf({ ...base, provider: "anthropic", configuredToken: "s3cret", providedToken: "nope" })).toBe("FORBIDDEN");

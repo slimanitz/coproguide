@@ -1,6 +1,8 @@
 /**
- * Claude price table, USD per million tokens (Anthropic first-party API rates, from the
- * claude-api skill, cached 2026-10-06). Cache writes use the 5-minute TTL multiplier (1.25x input);
+ * Price table, USD per million tokens.
+ * OpenAI rows: list prices of the GPT-5 family at launch (input / output / cached input; automatic
+ * prompt caching has no write cost). Check https://openai.com/api/pricing/ before relying on them.
+ * Claude rows: Anthropic first-party API rates (from the claude-api skill, cached 2026-10-06). Cache writes use the 5-minute TTL multiplier (1.25x input);
  * cache reads 0.1x input unless the skill lists a specific rate. Haiku 5.5 prices are for prompts
  * up to 100K tokens (every CoproGuide prompt is far below that).
  * Costs are stored in euros using USD_TO_EUR.
@@ -13,6 +15,12 @@ export interface ModelPrice {
 }
 
 export const PRICES_USD_PER_MTOK: Record<string, ModelPrice> = {
+  "gpt-5": { input: 1.25, output: 10, cacheRead: 0.125, cacheWrite: 0 },
+  "gpt-5-mini": { input: 0.25, output: 2, cacheRead: 0.025, cacheWrite: 0 },
+  "gpt-5-nano": { input: 0.05, output: 0.4, cacheRead: 0.005, cacheWrite: 0 },
+  "gpt-4.1": { input: 2, output: 8, cacheRead: 0.5, cacheWrite: 0 },
+  "gpt-4.1-mini": { input: 0.4, output: 1.6, cacheRead: 0.1, cacheWrite: 0 },
+  "gpt-4o": { input: 2.5, output: 10, cacheRead: 1.25, cacheWrite: 0 },
   "claude-sonnet-5-5": { input: 2, output: 10, cacheRead: 0.2, cacheWrite: 2.5 },
   "claude-sonnet-5": { input: 2, output: 10, cacheRead: 0.2, cacheWrite: 2.5 },
   "claude-sonnet-4-6": { input: 3, output: 15, cacheRead: 0.3, cacheWrite: 3.75 },
@@ -33,10 +41,15 @@ export interface TokenUsage {
 
 export const ZERO_USAGE: TokenUsage = { inputTokens: 0, outputTokens: 0, cacheReadTokens: 0, cacheWriteTokens: 0 };
 
-/** "mock-claude-sonnet-5-5" is priced like "claude-sonnet-5-5" so the offline demo shows realistic estimates. */
+/**
+ * "mock-gpt-5" is priced like "gpt-5" so the offline demo shows realistic estimates. Dated
+ * OpenAI ids ("gpt-5-2025-08-07") fall back to their base model.
+ */
 export function priceFor(model: string): ModelPrice | null {
   const base = model.replace(/^mock-/, "");
-  return PRICES_USD_PER_MTOK[base] ?? null;
+  if (PRICES_USD_PER_MTOK[base]) return PRICES_USD_PER_MTOK[base];
+  const undated = base.replace(/-\d{4}-\d{2}-\d{2}$/, "");
+  return PRICES_USD_PER_MTOK[undated] ?? null;
 }
 
 export function costUsd(usage: TokenUsage, model: string): number {

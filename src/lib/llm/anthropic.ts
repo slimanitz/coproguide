@@ -2,7 +2,10 @@ import Anthropic from "@anthropic-ai/sdk";
 import type { Effort } from "../env";
 import { OUT_OF_CORPUS_SENTINEL } from "../gate";
 import { buildUserTurn, formatExtracts, JUDGE_SYSTEM_PROMPT, SYSTEM_PROMPT } from "../prompts";
+import { parseJudgeOutput } from "./judge-output";
 import type { GenerateParams, Judge, JudgeInput, JudgeVerdict, LlmEvent, LlmProvider } from "./types";
+
+export { parseJudgeOutput };
 
 export interface AnthropicProviderOptions {
   model: string;
@@ -72,16 +75,6 @@ export class AnthropicProvider implements LlmProvider {
       },
     };
   }
-}
-
-/** Extracts {"score", "rationale"} from the judge output, tolerating surrounding prose. */
-export function parseJudgeOutput(text: string): { score: number; rationale: string } {
-  const match = text.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error(`Judge returned no JSON: ${text.slice(0, 200)}`);
-  const parsed = JSON.parse(match[0]) as { score?: unknown; rationale?: unknown };
-  const score = Number(parsed.score);
-  if (!Number.isFinite(score) || score < 1 || score > 5) throw new Error(`Invalid judge score: ${String(parsed.score)}`);
-  return { score: Math.round(score), rationale: String(parsed.rationale ?? "") };
 }
 
 /**

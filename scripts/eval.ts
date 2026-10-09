@@ -1,5 +1,5 @@
 /**
- * pnpm eval [--name <run name>] [--provider mock|anthropic] [--limit <n>] [--min-similarity <x>]
+ * pnpm eval [--name <run name>] [--provider mock|openai|anthropic] [--limit <n>] [--min-similarity <x>]
  * Runs the golden set (evals/golden.jsonl) against the configured provider, stores the run
  * in eval_runs / eval_results and writes evals/reports/<timestamp>.json + .md.
  */
@@ -16,8 +16,10 @@ function arg(name: string): string | undefined {
 }
 
 const providerName = (arg("provider") ?? env.llmProvider) as LlmProviderName;
-if (providerName === "anthropic" && !process.env.ANTHROPIC_API_KEY) {
-  console.error("LLM_PROVIDER=anthropic requires ANTHROPIC_API_KEY. Use --provider mock for an offline run.");
+const requiredKey: Record<string, string | undefined> = { openai: "OPENAI_API_KEY", anthropic: "ANTHROPIC_API_KEY" };
+const keyName = requiredKey[providerName];
+if (keyName && !process.env[keyName]) {
+  console.error(`LLM_PROVIDER=${providerName} requires ${keyName}. Use --provider mock for an offline run.`);
   process.exit(1);
 }
 process.env.MOCK_STREAM_DELAY_MS ??= "0";

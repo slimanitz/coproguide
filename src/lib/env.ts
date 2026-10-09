@@ -10,7 +10,8 @@ function num(name: string, fallback: number): number {
   return value;
 }
 
-export type LlmProviderName = "mock" | "anthropic";
+export type LlmProviderName = "mock" | "openai" | "anthropic";
+export const PROVIDERS: readonly LlmProviderName[] = ["mock", "openai", "anthropic"];
 export type Effort = "low" | "medium" | "high" | "xhigh" | "max";
 
 export const env = {
@@ -19,17 +20,27 @@ export const env = {
   },
   get llmProvider(): LlmProviderName {
     const value = (process.env.LLM_PROVIDER ?? "mock").toLowerCase();
-    if (value !== "mock" && value !== "anthropic") throw new Error(`Unknown LLM_PROVIDER: ${value}`);
-    return value;
+    if (!PROVIDERS.includes(value as LlmProviderName)) throw new Error(`Unknown LLM_PROVIDER: ${value}`);
+    return value as LlmProviderName;
   },
+  /** True for every provider that costs money (everything but the mock). */
+  get isPaidProvider() {
+    return this.llmProvider !== "mock";
+  },
+  /** Generation model of the active provider (OPENAI_MODEL / ANTHROPIC_MODEL). */
   get generationModel() {
-    return process.env.ANTHROPIC_MODEL ?? "claude-sonnet-5-5";
+    if (this.llmProvider === "anthropic") return process.env.ANTHROPIC_MODEL ?? "claude-sonnet-5-5";
+    return process.env.OPENAI_MODEL ?? "gpt-5";
   },
+  /** LLM-as-judge model of the active provider (OPENAI_JUDGE_MODEL / ANTHROPIC_JUDGE_MODEL). */
   get judgeModel() {
-    return process.env.ANTHROPIC_JUDGE_MODEL ?? "claude-haiku-5-5";
+    if (this.llmProvider === "anthropic") return process.env.ANTHROPIC_JUDGE_MODEL ?? "claude-haiku-5-5";
+    return process.env.OPENAI_JUDGE_MODEL ?? "gpt-5-mini";
   },
+  /** Reasoning effort for generation (OPENAI_REASONING_EFFORT / ANTHROPIC_EFFORT). */
   get generationEffort(): Effort {
-    return (process.env.ANTHROPIC_EFFORT as Effort | undefined) ?? "low";
+    const raw = this.llmProvider === "anthropic" ? process.env.ANTHROPIC_EFFORT : process.env.OPENAI_REASONING_EFFORT;
+    return (raw as Effort | undefined) ?? "low";
   },
   get maxTokens() {
     return num("LLM_MAX_TOKENS", 16000);
@@ -44,7 +55,7 @@ export const env = {
   get chatHistoryTurns() {
     return num("CHAT_HISTORY_TURNS", 10);
   },
-  /** Required (x-admin-token header) to start evaluations through the API when LLM_PROVIDER=anthropic. */
+  /** Required (x-admin-token header) to start evaluations through the API with a paid provider. */
   get adminToken() {
     return process.env.ADMIN_TOKEN || undefined;
   },

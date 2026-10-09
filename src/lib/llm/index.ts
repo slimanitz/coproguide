@@ -1,11 +1,15 @@
 import { env, type LlmProviderName } from "../env";
 import { AnthropicJudge, AnthropicProvider } from "./anthropic";
 import { MockJudge, MockProvider } from "./mock";
+import { OpenAiJudge, OpenAiProvider } from "./openai";
 import type { Judge, LlmProvider } from "./types";
 
 export * from "./types";
 
 export function createProvider(name: LlmProviderName = env.llmProvider): LlmProvider {
+  if (name === "openai") {
+    return new OpenAiProvider({ model: env.generationModel, maxTokens: env.maxTokens, effort: env.generationEffort });
+  }
   if (name === "anthropic") {
     return new AnthropicProvider({
       model: env.generationModel,
@@ -18,6 +22,7 @@ export function createProvider(name: LlmProviderName = env.llmProvider): LlmProv
 }
 
 export function createJudge(name: LlmProviderName = env.llmProvider): Judge {
+  if (name === "openai") return new OpenAiJudge(env.judgeModel);
   return name === "anthropic" ? new AnthropicJudge(env.judgeModel) : new MockJudge();
 }
 

@@ -1,7 +1,7 @@
 # Architecture
 
 CoproGuide is a single Next.js 15 application (UI + API) backed by PostgreSQL 16 with
-pgvector. Embeddings run in-process on CPU; generation and judging call the Claude API, or a
+pgvector. Embeddings run in-process on CPU; generation and judging call the OpenAI API (GPT-5 family; the Claude API is an alternative), or a
 deterministic mock provider for offline use.
 
 ## Context (C4 level 1)
@@ -10,7 +10,7 @@ deterministic mock provider for offline use.
 flowchart LR
   user([Copropriétaire / locataire / bailleur]) -- "questions, sources, dashboard" --> app[CoproGuide<br/>Next.js app :3400]
   ops([Mainteneur]) -- "pnpm ingest / eval / fetch:legifrance" --> app
-  app -- "Messages API (streaming, prompt caching)" --> claude[(Claude API<br/>Sonnet 5.5 + Haiku 5.5 judge)]
+  app -- "Chat Completions (streaming, auto prompt caching)" --> claude[(OpenAI API<br/>GPT-5 + GPT-5 mini judge<br/>or Claude API)]
   app -. "optional corpus refresh" .-> piste[(Légifrance API<br/>via PISTE)]
   app -- "SQL + pgvector" --> db[(PostgreSQL 16<br/>pgvector :5438)]
 ```
@@ -32,7 +32,7 @@ flowchart TB
       chat[chat.ts<br/>orchestration + persistence]
       retrieval[retrieval.ts<br/>hybrid search + RRF]
       gate[gate.ts + sentinel-filter.ts<br/>confidence gate]
-      llm[llm/<br/>anthropic | mock]
+      llm[llm/<br/>openai | anthropic | mock]
       emb[embeddings.ts<br/>e5-small ONNX]
       repo[repo.ts<br/>Repository]
       evals[evals/<br/>runner + metrics]
@@ -42,7 +42,7 @@ flowchart TB
 
   scripts[scripts/<br/>ingest, eval, calibrate, fetch-legifrance]
   db[(PostgreSQL + pgvector)]
-  claude[(Claude API)]
+  claude[(OpenAI / Claude API)]
 
   chatui -- fetch + SSE --> sse
   chatui -- queries/mutations --> gql
@@ -112,6 +112,6 @@ sequenceDiagram
 - **Prompt caching**: the system prompt is byte-stable (no dates or ids) and sent with
   `cache_control: ephemeral`; extracts and question come after the breakpoint. The dashboard
   shows the cache hit rate measured from `usage.cache_read_input_tokens`.
-- **Provider interface** (`LlmProvider`): `anthropic` for production, `mock` for tests, CI and
+- **Provider interface** (`LlmProvider`): `openai` for production (`anthropic` as an alternative), `mock` for tests, CI and
   the offline demo. The mock reports estimated token usage priced as the configured model so
   that dashboards and cost reports are meaningful without a key.

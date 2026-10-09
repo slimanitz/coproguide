@@ -24,7 +24,7 @@ export default async function EvalsPage() {
             corrects, note d&apos;un juge LLM, latence et coût. Lancement en CLI : <code className="rounded bg-surface-2 px-1">pnpm eval</code>.
           </p>
         </div>
-        <RunEvalButton running={running} needsToken={env.llmProvider === "anthropic"} />
+        <RunEvalButton running={running} needsToken={env.isPaidProvider} />
       </header>
       {runs.length === 0 ? (
         <p className="rounded-lg border border-border bg-surface px-4 py-8 text-center text-sm text-muted">

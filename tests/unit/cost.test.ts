@@ -24,10 +24,15 @@ describe("cost", () => {
     expect(costUsd({ inputTokens: 10, outputTokens: 10, cacheReadTokens: 0, cacheWriteTokens: 0 }, "gpt-unknown")).toBe(0);
   });
 
-  it("cache write costs 1.25x input, cache read 0.1x (or less) for every model", () => {
+  it("Claude: cache write 1.25x input, cache read 0.1x (or less); OpenAI: no write cost, cached input at most 0.5x", () => {
     for (const [model, p] of Object.entries(PRICES_USD_PER_MTOK)) {
-      expect(p.cacheWrite, model).toBeCloseTo(p.input * 1.25);
-      expect(p.cacheRead, model).toBeLessThanOrEqual(p.input * 0.1 + 1e-9);
+      if (model.startsWith("claude-")) {
+        expect(p.cacheWrite, model).toBeCloseTo(p.input * 1.25);
+        expect(p.cacheRead, model).toBeLessThanOrEqual(p.input * 0.1 + 1e-9);
+      } else {
+        expect(p.cacheWrite, model).toBe(0);
+        expect(p.cacheRead, model).toBeLessThanOrEqual(p.input * 0.5 + 1e-9);
+      }
     }
   });
 
